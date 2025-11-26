@@ -57,6 +57,8 @@ Offentlig del: http://localhost:8000
 
 Admin: http://localhost:8000/admin/articles
 
+API: http://localhost:8000/api/articles
+
 ## Fokusområder
 Der er sat fokus på at benytte laravels økosystem, såsom migrations, factories, seeding, form requests.
 

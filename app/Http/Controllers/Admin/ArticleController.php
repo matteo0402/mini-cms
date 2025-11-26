@@ -10,17 +10,10 @@ use App\Http\Requests\StoreArticleRequest;
 
 class ArticleController extends Controller
 {
-    public function index(Request $request)
+    public function index()
     {
-        $query = Article::where('published', true);
-
-        if ($search = $request->query('search')) {
-            $query->where('title', 'like', "%{$search}%");
-        }
-
-        $articles = $query->latest()->get();
-
-        return view('public.index', compact('articles', 'search'));
+        $articles = Article::with('category')->latest()->get();
+        return view('admin.articles.index', compact('articles'));
     }
 
     public function create()

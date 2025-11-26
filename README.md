@@ -29,6 +29,11 @@ DB_CONNECTION=sqlite
 DB_DATABASE=/database/database.sqlite
 ```
 
+### Opret en app key
+```bash
+php artisan key:generate
+```
+
 ### Kør migrations og seed databasen
 ```bash 
 php artisan migrate:fresh --seed
@@ -46,6 +51,11 @@ php artisan serve
 ```
 
 Standard URL: http://127.0.0.1:8000
+
+## Ruter:
+Offentlig del: http://localhost:8000
+
+Admin: http://localhost:8000/admin/articles
 
 ## Fokusområder
 Der er sat fokus på at benytte laravels økosystem, såsom migrations, factories, seeding, form requests.
